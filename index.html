@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MindSync - Focus & Wellness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h2>How are you feeling today?</h2>
+
+    <select id="mood">
+        <option>😐 Normal</option>
+        <option>😴 Tired</option>
+        <option>😰 Stressed</option>
+    </select>
+
+<button onclick="recommend()">Get Suggestion</button>
+
+<p id="result"></p>
+
+<script>
+function recommend() {
+    let mood = document.getElementById("mood").value;
+    let result = document.getElementById("result");
+
+    if (mood.includes("Tired")) {
+        result.innerText = "Take a short break ☕";
+    } else if (mood.includes("Stressed")) {
+        result.innerText = "Try breathing exercise 🧘";
+    } else {
+        result.innerText = "Start a 25 min focus session 🎯";
+    }
+}
+</script>
+    <h1>MindSync</h1>
+    <p>Focus better. Feel better.</p>
+    <button>Download App</button>
+</header>
+
+<section>
+    <h2>Why MindSync?</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Focus Timer</h3>
+            <p>Beat procrastination using smart sessions</p>
+        </div>
+
+        <div class="card">
+            <h3>Mood Tracking</h3>
+            <p>Track your emotions daily</p>
+        </div>
+
+        <div class="card">
+            <h3>AI Suggestions</h3>
+            <p>Get recommendations based on your mood</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Blog</h2>
+    <a href="blog.html">How to Stay Productive During Exams</a>
+</section>
+
+</body>
+</html>
